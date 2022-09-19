@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PokemonService {
-  URL = environment.url
+  URL = environment.endpoint
   constructor(private http: HttpClient) { }
   getPokemons(l: any, o: any) {
     return this.http.get(`${this.URL}pokemon?limit=${l}&offset=${o}`)
